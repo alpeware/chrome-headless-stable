@@ -8,7 +8,7 @@ RUN apt-get update -qqy \
   && apt-get -qqy install libnss3 libnss3-tools libfontconfig1 wget ca-certificates apt-transport-https inotify-tools \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-ENV CHROME_VERSION=75.0.3770.142
+ENV CHROME_VERSION=76.0.3809.87
 
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
