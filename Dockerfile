@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 LABEL maintainer "Alpeware <info@alpeware.com>"
 
@@ -6,6 +6,7 @@ EXPOSE 9222
 
 RUN apt-get update -qqy \
   && apt-get -qqy install libnss3 libnss3-tools libfontconfig1 wget ca-certificates apt-transport-https inotify-tools \
+  gnupg \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 ENV CHROME_VERSION=83.0.4103.116
