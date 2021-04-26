@@ -9,7 +9,7 @@ RUN apt-get update -qqy \
   gnupg \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-ENV CHROME_VERSION=90.0.4430.85
+ENV CHROME_VERSION=90.0.4430.93
 
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
